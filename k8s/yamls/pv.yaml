@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: model-db-pv
+spec:
+  storageClassName: ml-pv1
+  
