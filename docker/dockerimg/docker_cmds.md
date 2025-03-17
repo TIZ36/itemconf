@@ -12,7 +12,7 @@ docker run -d \
 ### 安装opwenwebui
 
 ```shell
-docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=http://10.3.30.81:11434/api -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=http://{host}/api -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
 
 ### 安装prometheus
@@ -47,7 +47,7 @@ scrape_configs:
 # start, 使用制定的volumn。bindmount
 docker run \
     -dp 9090:9090 \
-    --mount type=bind,source=/Users/lilithgames/docker-data-volume/prometheus_data,target=/prometheus \
+    --mount type=bind,source={dir}/prometheus_data,target=/prometheus \
     -v ./prometheus.yml:/etc/prometheus/prometheus.yml \
     prom/prometheus \
     --config.file=/etc/prometheus/prometheus.yml \
@@ -62,7 +62,7 @@ curl -X POST localhost:9090/-/reload
 ```shell
 
 docker run -dp 3001:3000 --name=grafana \
---mount type=bind,source=/Users/lilithgames/docker-data-volume/grafana_data,target=/var/lib/grafana \
+--mount type=bind,source={dir}/grafana_data,target=/var/lib/grafana \
 grafana/grafana-enterprise
 
 ```
@@ -71,8 +71,8 @@ grafana/grafana-enterprise
 
 ```shell
 docker run -dp 6379:6379 --name myredis \
--v /Users/lilithgames/docker-data-volume/redis_data/redis.conf:/etc/redis/redis.conf  \
--v /Users/lilithgames/docker-data-volume/redis_data/data:/data \
+-v {dir}/redis_data/redis.conf:/etc/redis/redis.conf  \
+-v {dir}/redis_data/data:/data \
 --restart=always \
 redis \
 redis-server /etc/redis/redis.conf
@@ -85,7 +85,7 @@ docker run -d \
   -p 9000:9000 \
   -p 9001:9001 \
   --name minio1 \
-  -v /Users/lilithgames/docker-data-volume/minio_data:/data \
+  -v {dir}/minio_data:/data \
   -e "MINIO_ROOT_USER=schuck" \
   -e "MINIO_ROOT_PASSWORD=597502610ztS$%^&" \
   quay.io/minio/minio server /data --console-address ":9001"

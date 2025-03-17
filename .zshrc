@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/lilithgame/.oh-my-zsh"
+export ZSH="/Users/boh/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -111,18 +111,18 @@ alias kubectlm="minikube kubectl --"
 
 # 便捷启动
 alias code_zsh="cd ~/ && code ~/.zshrc"
-alias code_dev="cd /Users/lilithgame/schuck/workspace/dev_dir/main_workline/im-erlang && code ."
-alias code_fix="cd  /Users/lilithgame/schuck/workspace/fix_dir/im-erlang && code ."
-alias code_immt="cd  /Users/lilithgame/schuck/workspace/immt && code ."
-alias code_nds="cd  /Users/lilithgame/schuck/workspace/nds && code ."
+alias code_dev="cd /Users/boh/schuck/workspace/dev_dir/main_workline/im-erlang && code ."
+alias code_fix="cd  /Users/boh/schuck/workspace/fix_dir/im-erlang && code ."
+alias code_immt="cd  /Users/boh/schuck/workspace/immt && code ."
+alias code_nds="cd  /Users/boh/schuck/workspace/nds && code ."
 
 
 #im-erlang
-alias code_release54="cd /Users/lilithgame/schuck/workspace/dev/release_54/im-erlang && git pull && code ."
-alias code_release56="cd /Users/lilithgame/schuck/workspace/dev/release_56/im-erlang && git pull && code ."
+alias code_release54="cd /Users/boh/schuck/workspace/dev/release_54/im-erlang && git pull && code ."
+alias code_release56="cd /Users/boh/schuck/workspace/dev/release_56/im-erlang && git pull && code ."
 
 
-alias docker_run_im_local_redis="docker run --name myredis -p 6379:6379 -v /Users/lilithgame/schuck/workspace/im_local/redis/data:/data -v /Users/lilithgame/schuck/workspace/im_local/redis/conf/redis.conf:/etc/redis/redis.conf -d redis redis-server /etc/redis/redis.conf"
+alias docker_run_im_local_redis="docker run --name myredis -p 6379:6379 -v /Users/boh/schuck/workspace/im_local/redis/data:/data -v /Users/boh/schuck/workspace/im_local/redis/conf/redis.conf:/etc/redis/redis.conf -d redis redis-server /etc/redis/redis.conf"
 alias start_node_center="sh  ~/schuck/workspace/node_center/start.sh"
 export PATH="$HOME:$PATH"
 
@@ -150,7 +150,7 @@ source ~/.ssh
 
 alias codei="/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin/code"
 alias code="//Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
-alias idea="/Users/lilithgame/Applications/JetBrains\ Toolbox/IntelliJ\ IDEA\ Ultimate.app/Contents/MacOS/jetbrains-toolbox-launcher"
+alias idea="/Users/boh/Applications/JetBrains\ Toolbox/IntelliJ\ IDEA\ Ultimate.app/Contents/MacOS/jetbrains-toolbox-launcher"
 
 
 function reload_zsh() {
@@ -173,18 +173,18 @@ function new_elixir_proj {
 }
 
 function conf {
-    result=$(curl https://conf.lilithgame.com/api/im/env\?access_type\=$1) && echo $result | jq .
+    result=$(curl https://conf.boh.com/api/im/env\?access_type\=$1) && echo $result | jq .
 }
 function confmd5 {
-    result=$(curl https://conf.lilithgame.com/api/im/env\?env_id\=$1) && echo $result | jq .
+    result=$(curl https://conf.boh.com/api/im/env\?env_id\=$1) && echo $result | jq .
 }
 
 export CARGO_NET_GIT_FETCH_WITH_CLI=true
-source /Users/lilithgame/.cargo/env
-export PATH='/usr/local/go/bin:/Users/lilithgame/dev_tools/platform_tools:/opt/homebrew/Cellar/libuv:/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/bin:/Users/lilithgame:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/lilithgame/.cargo/bin'
+source /Users/boh/.cargo/env
+export PATH='/usr/local/go/bin:/Users/boh/dev_tools/platform_tools:/opt/homebrew/Cellar/libuv:/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/bin:/Users/boh:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/boh/.cargo/bin'
 
 # set erlang
-source /Users/lilithgame/erlang/25.0/activate
+source /Users/boh/erlang/25.0/activate
 source $HOME/.kiex/elixirs/elixir-1.15.2.env
 # config go path
 # export GOROOT=$HOME/go
@@ -197,19 +197,19 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 
 export PATH=$PATH:~/Downloads/cmd_tool
-export PATH="$PATH:/Users/lilithgame/go/deps/bin"
+export PATH="$PATH:/Users/boh/go/deps/bin"
 
 go env -w GO111MODULE="on"
 go env -w GOPROXY=https://goproxy.cn
-go env -w GOPRIVATE=gitlab.lilithgame.com
+go env -w GOPRIVATE=gitlab.boh.com
 
 
-export IM_ERLANG_HOME=/Users/lilithgame/schuck/workspace/dev/im-erlang
+export IM_ERLANG_HOME=/Users/boh/schuck/workspace/dev/im-erlang
 function codeim {
     code $IM_ERLANG_HOME
 }
 
-export HOTDOG_HOME=/Users/lilithgame/schuck/workspace/hotdog
+export HOTDOG_HOME=/Users/boh/schuck/workspace/hotdog
 function code_hotdog {
     code $HOTDOG_HOME
 }
@@ -224,14 +224,14 @@ alias pip=pip3.9
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/lilithgame/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/boh/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/lilithgame/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/lilithgame/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/boh/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/boh/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/lilithgame/anaconda3/bin:$PATH"
+        export PATH="/Users/boh/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup

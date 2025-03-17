@@ -52,7 +52,7 @@ su root
 tar czf erl-24.0.2.tar.gz erl-24.0.2/
 ## 推送刀gitlab hotdog ##
 
-cd ~ && git clone ssh://git@git.lilithgame.com:2222/BaoOnHead/hotdog.git
+cd ~ && git clone ssh://git@git.boh.com:2222/BaoOnHead/hotdog.git
 cd /home/im/hotdog/erlang-24/
 
 passwd root
