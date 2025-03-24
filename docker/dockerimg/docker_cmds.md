@@ -107,3 +107,11 @@ docker run -d --rm --name jaeger \
   -p 9411:9411 \
   jaegertracing/all-in-one:1.57
 ```
+
+## 安装postgress
+docker run --name local-postgres \
+    --mount type=bind,source=/Users/lilithgames/docker-data-volume/postgres_data,target=/var/lib/postgresql/data \
+   -e POSTGRES_USER=root \
+   -e POSTGRES_PASSWORD=difyai123456 \
+   -p 5432:5432\
+   -d postgres
