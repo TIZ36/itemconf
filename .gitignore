@@ -3,3 +3,4 @@
 # ignore all sub-dir in ./dify/
 dify/dify*
 dify/current*
+dify/*.tar.gz
