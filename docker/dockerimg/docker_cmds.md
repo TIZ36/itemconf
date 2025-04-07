@@ -110,7 +110,7 @@ docker run -d --rm --name jaeger \
 
 ## 安装postgress
 docker run --name local-postgres \
-    --mount type=bind,source=/Users/lilithgames/docker-data-volume/postgres_data,target=/var/lib/postgresql/data \
+    --mount type=bind,source=/Users/xxxxgames/docker-data-volume/postgres_data,target=/var/lib/postgresql/data \
    -e POSTGRES_USER=root \
    -e POSTGRES_PASSWORD=difyai123456 \
    -p 5432:5432\
