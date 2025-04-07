@@ -8,7 +8,7 @@ VER2=${2:-0.11.0}
 V1=dify-$VER1
 V2=dify-$VER2
 
-cp   $V1/docker/*.sh  $V2/docker/  ## 一些启停脚本
+# cp   $V1/docker/*.sh  $V2/docker/  ## 一些启停脚本
 
 ## 以前版本的数据信息，务必拷贝，不然就是一个全新的环境了
 sudo cp -rf $V1/docker/volumes/* $V2/docker/volumes/  
